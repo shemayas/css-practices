@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Try this</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin-bottom: 200px;
+      }
+
+      code {
+        background-color: lightgray;
+        padding: 2px 6px;
+        color: #000;
+        border-radius: 8px;
+        font-family: monospace;
+      }
+
+      h2 {
+        margin-top: 30px;
+      }
+
+      #flex-1 {
+        display: flex;
+        height: 200px;
+        width: 400px;
+        gap: 10px;
+        justify-content: space-between;
+      }
+
+      #flex-1 div {
+        border: 1px solid blue;
+        height: 70%;
+        flex: 1;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #inner-3 {
+        align-self: flex-end;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+
+      .box-w2 {
+        width: 200px;
+        height: 100px;
+      }
+
+      #column-with-row {
+        display: flex;
+        gap: 10px;
+      }
+
+      #column-with-row > div {
+        display: flex;
+        gap: 10px;
+        border: 1px solid blue;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      #column-with-row .box {
+        background-color: aqua;
+      }
+
+      .row {
+        flex-direction: row;
+      }
+
+      .column {
+        flex-direction: column;
+      }
+
+      .container-400 {
+        width: 400px;
+      }
+
+      #flex-3 {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      #flex-3 .box {
+        background-color: aqua;
+      }
+
+      .instructions {
+        color: gray;
+        font-style: italic;
+        font-size: 20px;
+      }
+
+      .instructions span {
+        font-weight: bold;
+      }
+    </style>
+
+    <h1>Flex</h1>
+    <h2>1 - use Flex's <code>align-self</code></h2>
+    <div id="flex-1">
+      <div id="inner-1">1</div>
+      <div id="inner-2">2</div>
+      <div id="inner-3">3</div>
+      <div id="inner-4">4</div>
+    </div>
+
+    <h2>2 - use Flex's <code>flex-direction</code></h2>
+    <div id="column-with-row">
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="column">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+
+    <h2>3 - use Flex's <code>flex-wrap</code></h2>
+    <p class="instructions">
+      <span>instructions:</span> The container should be 400px wide and every
+      box should be 100px wide
+    </p>
+    <div id="flex-3" class="container-400">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <style>
+      .flex-4 {
+        display: flex;
+        gap: 10px;
+        border: 1px solid blue;
+        border-radius: 4px;
+        padding: 10px;
+        width: 600px;
+        margin-bottom: 40px;
+
+        [class^="box"] {
+          background-color: aqua;
+        }
+
+        &.end {
+            justify-content: flex-end;
+        }
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.between {
+            justify-content: space-between;
+        }
+
+        &.around {
+            justify-content: space-around;
+        }
+
+        &.evenly {
+            justify-content: space-evenly;
+        }
+
+
+      }
+    </style>
+    <h2>4 - use Flex's <code>justify-content</code></h2>
+    <p class="instructions">
+      <span>instructions:</span> The container should be 600px wide, every small
+      box should be 100px wide and the big box should be 200px wide
+    </p>
+    <p class="instructions">
+      Use the different <code>justify-content</code> values in order to imitate
+      the example
+    </p>
+    <div class="flex-4 container-400 end">
+      <div class="box"></div>
+      <div class="box-w2"></div>
+      <div class="box"></div>
+    </div>
+
+    <div class="flex-4 container-400 center">
+      <div class="box"></div>
+      <div class="box-w2"></div>
+      <div class="box"></div>
+    </div>
+    
+    <div class="flex-4 container-400 between">
+      <div class="box"></div>
+      <div class="box-w2"></div>
+      <div class="box"></div>
+    </div>
+    
+    <div class="flex-4 container-400 around">
+      <div class="box"></div>
+      <div class="box-w2"></div>
+      <div class="box"></div>
+    </div>
+    
+    <div class="flex-4 container-400 evenly">
+      <div class="box"></div>
+      <div class="box-w2"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
