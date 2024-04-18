@@ -4,15 +4,23 @@
   ul {
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
   }
 
   li {
-    label {
-      cursor: pointer;
+    &:has(input[type="checkbox"]:checked) {
+      text-decoration: line-through;
+      order: 1;
     }
 
-    label:has(input[type="checkbox"]:checked) {
-      text-decoration: line-through;
+    label,
+    input {
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
   }
 }
