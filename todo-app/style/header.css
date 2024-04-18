@@ -71,6 +71,12 @@ header {
       height: 30px;
       width: 30px;
       border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      
+      &:hover {
+        transform: rotate(0deg);
+      }
     }
   }
 }

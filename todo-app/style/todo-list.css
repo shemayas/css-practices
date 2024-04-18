@@ -14,13 +14,21 @@
       order: 1;
     }
 
-    label,
     input {
+      cursor: pointer;
+    }
+
+    label {
       cursor: pointer;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+
+      transition: font-size 0.2s ease-in-out;
+      &:hover {
+        font-size: 115%;
+      }
     }
   }
 }
